@@ -1,208 +1,308 @@
-<!DOCTYPE HTML>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Forty by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aaditya Jha Portfolio Website - Home" />
+  <title>Aaditya Jha | Home</title>
+  <link rel="icon" href="assets/images/logo.png" />
+  <style>
+    /* ===== BASE STYLES ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    body {
+      background: #f9f9f9;
+      color: #222;
+      line-height: 1.6;
+    }
 
-				<!-- Header -->
-					<header id="header" class="alt">
-  <a href="index.html" class="logo"><strong>Aaditya</strong> <span>Portfolio</span></a>
-</header>
+    /* ===== HEADER ===== */
+    header {
+      background: #111;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 6%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="landing.html">Landing</a></li>
-							<li><a href="generic.html">Generic</a></li>
-							<li><a href="elements.html">Elements</a></li>
-						</ul>
-						<ul class="actions stacked">
-							<li><a href="#" class="button primary fit">Get Started</a></li>
-							<li><a href="#" class="button fit">Log In</a></li>
-						</ul>
-					</nav>
+    header h1 {
+      font-size: 22px;
+    }
 
-				<!-- Banner -->
-					<section id="banner" class="major">
-  <div class="inner">
-    <header class="major">
-      <h1>Hi, I'm Aaditya 👋</h1>
-    </header>
-    <div class="content">
-      <p>Welcome to my personal website. I’m a student passionate about technology, creativity, and learning new things! I enjoy exploring robotics, programming, and innoviative ideas that can improve daily life in Nepal and beyond.</p>
-      <ul class="actions">
-        <li><a href="#one" class="button next scrolly">Explore My Work</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
 
-				<!-- Main -->
-					<div id="main">
+    nav a:hover {
+      color: #00bcd4;
+    }
 
-						<!-- One -->
-							<article>
-  <span class="image">
-    <img src="images/myproject.jpg" alt="My Project" />
-  </span>
-  <header class="major">
-    <h3><a href="projects.html" class="link">My Projects</a></h3>
-    <p>Explore some of my latest work and ideas.</p>
+    /* ===== HERO ===== */
+    .hero {
+      height: 90vh;
+      background: linear-gradient(to bottom right, #004d99, #0099ff);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin-bottom: 25px;
+    }
+
+    .hero button {
+      padding: 12px 25px;
+      font-size: 16px;
+      background: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      color: #004d99;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background: #00bcd4;
+      color: white;
+    }
+
+    /* ===== SKILLS PREVIEW ===== */
+    .skills-preview {
+      padding: 60px 10%;
+      text-align: center;
+      background: #fff;
+    }
+
+    .skills-preview h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #004d99;
+    }
+
+    .skills-preview p {
+      font-size: 17px;
+      color: #555;
+    }
+
+    /* ===== CONTACT SECTION ===== */
+    #contact {
+      padding: 60px 10%;
+      background: #f4f8fc;
+    }
+
+    #contact h3 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 40px;
+      color: #004d99;
+    }
+
+    #contact form {
+      max-width: 500px;
+      margin: 0 auto 50px auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #contact label {
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    #contact input,
+    #contact textarea {
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    #contact button {
+      padding: 12px;
+      background: #004d99;
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #contact button:hover {
+      background: #00bcd4;
+    }
+
+    .contact-methods {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+      text-align: center;
+    }
+
+    .contact-methods div {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      flex: 1 1 200px;
+    }
+
+    .contact-methods h3 {
+      margin-top: 10px;
+      color: #004d99;
+    }
+
+    .contact-methods a,
+    .contact-methods span {
+      display: block;
+      margin-top: 5px;
+      color: #555;
+      font-size: 15px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    footer ul.icons {
+      margin-bottom: 10px;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    footer ul.icons li a {
+      color: #ccc;
+      font-size: 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    footer ul.icons li a:hover {
+      color: #00bcd4;
+    }
+
+    footer a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+      .skills-preview h3,
+      #contact h3 {
+        font-size: 24px;
+      }
+      .contact-methods {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>Aaditya Jha</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="landing.html">Landing</a>
+      <a href="generic.html">About</a>
+      <a href="elements.html">Elements</a>
+      <a href="login.html">Contact</a>
+    </nav>
   </header>
-</article>
-								<article>
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Tempus</a></h3>
-										<p>feugiat amet tempus</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Magna</a></h3>
-										<p>Lorem etiam nullam</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Ipsum</a></h3>
-										<p>Nisl sed aliquam</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Consequat</a></h3>
-										<p>Ipsum dolor sit amet</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Etiam</a></h3>
-										<p>Feugiat amet tempus</p>
-									</header>
-								</article>
-							</section>
 
-						<!-- Two -->
-							<section id="two">
-								<div class="inner">
-									<header class="major">
-										<h2>Massa libero</h2>
-									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-									<ul class="actions">
-										<li><a href="landing.html" class="button next">Get Started</a></li>
-									</ul>
-								</div>
-							</section>
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <h2>Hello, I’m Aaditya Jha</h2>
+    <p>+2 Science (Computer) student | Passionate about technology, programming, and creating new things</p>
+    <button onclick="window.location.href='login.html'">Get in Touch</button>
+  </section>
 
-					</div>
+  <!-- ===== SKILLS PREVIEW ===== -->
+  <section class="skills-preview">
+    <h3>My Skills</h3>
+    <p>Web Development | Programming (C, Python) | Robotics | Creativity | Innovation</p>
+  </section>
 
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-							 <form
-  action="https://formspree.io/f/xeovjvqg"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="mailto:jhaaaditya00@gamil.com">jhaaaditya00@gmail.com</a>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>(+977 9840688748)</span>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>Sarlahi<br />
-										Madhesh Pradesh<br />
-										Nepal</span>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact">
+    <h3>Contact Me</h3>
+    <form action="https://formspree.io/f/xeovjvqg" method="POST">
+      <label>Your email:
+        <input type="email" name="email" required>
+      </label>
+      <label>Your message:
+        <textarea name="message" required></textarea>
+      </label>
+      <button type="submit">Send</button>
+    </form>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-  <li><a href="https://www.facebook.com/share/1D71yckcG2/" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-  <li><a href="https://www.instagram.com/jha.aaditya_?igsh=MWdyZDFwbXVjb2JkdQ==" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-  <li><a href="https://wa.me/9779840688748" class="icon brands alt fa-whatsapp"><span class="label">WhatsApp</span></a></li>
-  <li><a href="https://www.tiktok.com/@aadii.tya?_r=1&_t=ZS-91G7TTSMQ1h" class="icon brands alt fa-tiktok"><span class="label">TikTok</span></a></li>
-</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+    <div class="contact-methods">
+      <div>
+        <h3>Email</h3>
+        <a href="mailto:jhaaaditya00@gmail.com">jhaaaditya00@gmail.com</a>
+      </div>
+      <div>
+        <h3>Phone</h3>
+        <span>(+977 9840688748)</span>
+      </div>
+      <div>
+        <h3>Address</h3>
+        <span>Sarlahi, Madhesh Pradesh, Nepal</span>
+      </div>
+    </div>
+  </section>
 
-			</div>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <ul class="icons">
+      <li><a href="https://www.facebook.com/share/1D71yckcG2/" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+      <li><a href="https://www.instagram.com/jha.aaditya_?igsh=MWdyZDFwbXVjb2JkdQ==" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+      <li><a href="https://wa.me/9779840688748" class="icon brands alt fa-whatsapp"><span class="label">WhatsApp</span></a></li>
+      <li><a href="https://www.tiktok.com/@aadii.tya?_r=1&_t=ZS-91G7TTSMQ1h" class="icon brands alt fa-tiktok"><span class="label">TikTok</span></a></li>
+    </ul>
+    <ul class="copyright">
+      <li>&copy; 2025 Aaditya Jha</li>
+      <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+    </ul>
+  </footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-
+</body>
 </html>
-
-
-
