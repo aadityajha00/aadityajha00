@@ -37,3 +37,4 @@ The website includes multiple sections such as:
 ----------------------------------------------------------
 • Fully responsive design (works on mobile, tablet, and PC)
 • Simple navigation through Home, Landing, and Generic pages
+
